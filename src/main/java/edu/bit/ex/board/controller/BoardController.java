@@ -27,4 +27,13 @@ public class BoardController {
 		return "list";
 	}
 	
+	@GetMapping("/board/tables")
+	public String tables(Model model) {
+
+		log.debug("tables()...");
+		log.info("tables()...");
+		model.addAttribute("list", boardService.getList());
+		return "tables";
+	}
+	
 }
